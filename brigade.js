@@ -13,11 +13,10 @@ events.on("exec", (e,project) => {
     "dockerd-entrypoint.sh &",
     "sleep 30",
     "cd /src",
-    "docker build -t abhishekchauhan12/brigade-test:latest .",
+    "docker build -t abhishekchauhan12/brigade-test:50 .",
     "docker login -u $DOCKER_USER -p $DOCKER_PASS",
-    "docker push abhishekchauhan12/brigade-test:latest"
+    "docker push abhishekchauhan12/brigade-test:50"
   ];
   
   dockerBuild.run();
 });
-
